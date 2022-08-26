@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CentiFahrCalc.MainPage"
+             Shell.NavBarIsVisible="False">
+    <ContentPage.Background>
+        <LinearGradientBrush>
+
+            <GradientStop Color="#474E67"
+                          Offset="0.1" />
+            <GradientStop Color="#70737E"
+                          Offset="0.5" />
+            <GradientStop Color="#AD7D4D"
+                          Offset="1.0" />
+        </LinearGradientBrush>
+
+    </ContentPage.Background>
+
+    <Border Stroke="#D1B27C"
+        StrokeThickness="3" Background="Transparent"
+        Margin="5,5,5,5"
+        VerticalOptions="Fill"       
+        HorizontalOptions="Fill">
+        <Border.StrokeShape>
+            <RoundRectangle CornerRadius="10,10,10,10"/>
+        </Border.StrokeShape>
+
+        <VerticalStackLayout Padding="10,5,10,5">
+
+            <Label
+                Text="Temperature Calculator"
+                TextTransform="Uppercase"
+                TextColor="#D4C8A3"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="16"
+                HorizontalOptions="Center"
+                Padding="0,10,0,10"/>
+            <Grid ColumnDefinitions="*,*">
+                <Border Grid.Column="0" Grid.Row="0" Stroke="#D1B27C"
+                    StrokeThickness="3" Background="Transparent"
+                    Margin="5,5,5,5"
+	                StrokeShape ="RoundRectangle 10,10,10,10"
+                    VerticalOptions="Fill"       
+                    HorizontalOptions="Fill">
+                    <VerticalStackLayout Padding="10,5,10,5">
+                        <Label
+                             x:Name="CelciusLbl"
+                             Text="24"
+                             TextTransform="Uppercase"
+                             TextColor="#D4C8A3"
+                             FontSize="50"
+                             HorizontalOptions="Center" />
+                        <Label
+                             Text="Celcius"
+                             TextTransform="Uppercase"
+                             TextColor="#D4C8A3"
+                             SemanticProperties.HeadingLevel="Level2"
+                             FontSize="16"
+                             HorizontalOptions="Center" />
+                    </VerticalStackLayout>
+                </Border>
+                <Border Grid.Column="1" Grid.Row="0" Stroke="#D1B27C"
+                    StrokeThickness="3" Background="Transparent"
+                    Margin="5,5,5,5"
+	                StrokeShape ="RoundRectangle 10,10,10,10"
+                    VerticalOptions="Fill"       
+                    HorizontalOptions="Fill">
+                    <VerticalStackLayout Padding="10,5,10,5">
+                        <Label
+                             x:Name="FahrenheitLbl"
+                             Text="180"
+                             TextTransform="Uppercase"
+                             TextColor="#D4C8A3"
+                             FontSize="50"
+                             HorizontalOptions="Center" />
+                        <Label
+                             Text="Fahrenheit"
+                             TextTransform="Uppercase"
+                             TextColor="#D4C8A3"
+                             SemanticProperties.HeadingLevel="Level2"
+                             FontSize="16"
+                             HorizontalOptions="Center" />
+                    </VerticalStackLayout>
+                </Border>
+
+            </Grid>
+            <Grid ColumnDefinitions="*,*,*,*,*,*">
+                <VerticalStackLayout Grid.Row="0" Grid.Column="1">
+                    <Border Stroke="#D1B27C"
+                        StrokeThickness="3" Background="Transparent"
+	                    StrokeShape ="RoundRectangle 10,10,10,10" Margin="0,20,0,0">
+                        <Button Background="#E7CB32"
+                                Opacity="0.3"
+                            x:Name="CelsiusPlusBtn"
+                            Text="+"
+                                 FontSize="32"
+                            SemanticProperties.Hint="Increase temperature in Celsius"
+                            Clicked="OnCelsiusPlusBtnClicked" />
+                    </Border>
+                    
+                    <Border Grid.Column="1" Grid.Row="0" Stroke="#D1B27C"
+                        StrokeThickness="3" Background="Transparent"
+	                    StrokeShape ="RoundRectangle 10,10,10,10" Margin="0,10,0,0">
+                        <Button Background="#E7CB32"
+                                Opacity="0.3"
+                            x:Name="CelsiusMinusBtn"
+                            Text="-"
+                                FontSize="32"
+                            SemanticProperties.Hint="Decrease temperature in Celsius"
+                            Clicked="OnCelsiusMinusBtnClicked" />
+                        </Border>
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Grid.Row="0" Grid.Column="4">
+                    <Border Stroke="#D1B27C"
+                        StrokeThickness="3" Background="Transparent"
+	                    StrokeShape ="RoundRectangle 10,10,10,10" Margin="0,20,0,0">
+                        <Button Background="#E7CB32"
+                                Opacity="0.3"
+                            x:Name="FahrenheitPlusBtn"
+                            Text="+"
+                                 FontSize="32"
+                            SemanticProperties.Hint="Increase temperature in Fahrenheit"
+                            Clicked="OnFahrenheitPlusBtnClicked" />
+                    </Border>
+
+                    <Border Grid.Column="1" Grid.Row="0" Stroke="#D1B27C"
+                        StrokeThickness="3" Background="Transparent"
+	                    StrokeShape ="RoundRectangle 10,10,10,10" Margin="0,10,0,0">
+                        <Button Background="#E7CB32"
+                                Opacity="0.3"
+                            x:Name="FahrenheitMinusBtn"
+                            Text="-"
+                                FontSize="32"
+                            SemanticProperties.Hint="Decrease temperature in Fahrenheit"
+                            Clicked="OnFahrenheitMinusBtnClicked" />
+                    </Border>
+                </VerticalStackLayout>
+
+
+            </Grid>
+
+        </VerticalStackLayout>
+    </Border>
+
+
+
+</ContentPage>
+    
